@@ -50,7 +50,7 @@ int main(int argc, char** argv)
           f75111_io_controller_.setByte(0x7);
           break;
       }
-      std::this_thread::sleep_for(std::chrono::seconds(10));
+      std::this_thread::sleep_for(std::chrono::seconds(1));
     }
   }
   catch (std::exception& e) {
