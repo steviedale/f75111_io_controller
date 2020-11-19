@@ -19,52 +19,35 @@ int main(int argc, char** argv)
       {
         case OFF:
           color = "OFF";
-          f75111_io_controller_.setPin(0, false);
-          f75111_io_controller_.setPin(1, false);
-          f75111_io_controller_.setPin(2, false);
+          f75111_io_controller_.setByte(0x0);
           break;
         case RED:
           color = "RED";
-          f75111_io_controller_.setPin(0, true);
-          f75111_io_controller_.setPin(1, false);
-          f75111_io_controller_.setPin(2, false);
+          f75111_io_controller_.setByte(0x1);
           break;
-
        case GREEN:
           color = "GREEN";
-          f75111_io_controller_.setPin(0, false);
-          f75111_io_controller_.setPin(1, true);
-          f75111_io_controller_.setPin(2, false);
+          f75111_io_controller_.setByte(0x2);
           break;
         case YELLOW:
           color = "YELLOW";
-          f75111_io_controller_.setPin(0, true);
-          f75111_io_controller_.setPin(1, true);
-          f75111_io_controller_.setPin(2, false);
+          f75111_io_controller_.setByte(0x3);
           break;
         case BLUE:
           color = "BLUE";
-          f75111_io_controller_.setPin(0, false);
-          f75111_io_controller_.setPin(1, false);
-          f75111_io_controller_.setPin(2, true);
+          f75111_io_controller_.setByte(0x4);
           break;
         case MAGENTA:
           color = "MAGENTA";
-          f75111_io_controller_.setPin(0, true);
-          f75111_io_controller_.setPin(1, false);
-          f75111_io_controller_.setPin(2, true);
+          f75111_io_controller_.setByte(0x5);
           break;
         case CYAN:
           color = "CYAN";
-          f75111_io_controller_.setPin(0, false);
-          f75111_io_controller_.setPin(1, true);
-          f75111_io_controller_.setPin(2, true);
+          f75111_io_controller_.setByte(0x6);
           break;
         case WHITE:
           color = "WHITE";
-          f75111_io_controller_.setPin(0, true);
-          f75111_io_controller_.setPin(1, true);
-          f75111_io_controller_.setPin(2, true);
+          f75111_io_controller_.setByte(0x7);
           break;
       }
       std::this_thread::sleep_for(std::chrono::seconds(1));

@@ -1,6 +1,7 @@
+typedef unsigned char BYTE;
 
 class F75111IOController {
 public:
   F75111IOController();
-  void setPin(int pin_num, bool enable);
+  void setByte(BYTE byte);
 };
