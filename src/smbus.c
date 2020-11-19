@@ -541,15 +541,15 @@ bool Get_Apollo_Lake_SOC_SMBusIoAddr(DWORD dwIOAddr)
 
 	dwResult = 	PCI_Read(2);
 
-	printf("Apollo_Lake_SOC SMBus Host Configure = 0x%4X\n",dwResult );
+	// printf("Apollo_Lake_SOC SMBus Host Configure = 0x%4X\n",dwResult );
 
 	if ( dwResult & Apollo_Lake_SOC_SMBUS_HOST_HST_EN )
 	{
-		printf("AutoDetect_IOBase : Intel Apollo_Lake_SOC SMBus Host Enable!\n");
+		// printf("AutoDetect_IOBase : Intel Apollo_Lake_SOC SMBus Host Enable!\n");
 	}
 	else
 	{
-		printf("AutoDetect_IOBase : Intel Apollo_Lake_SOC SMBus Host Disable!\n");
+		// printf("AutoDetect_IOBase : Intel Apollo_Lake_SOC SMBus Host Disable!\n");
 
 		return false;
 	}
@@ -558,7 +558,7 @@ bool Get_Apollo_Lake_SOC_SMBusIoAddr(DWORD dwIOAddr)
 
 	m_SMBusMapIoAddr = 	(WORD) PCI_Read(4) & 0xFFF0 ;
 
-	printf("AutoDetect_IOBase : Intel Apollo_Lake_SOC SMBus Host I/O Base = 0x%4X\n",m_SMBusMapIoAddr );
+	// printf("AutoDetect_IOBase : Intel Apollo_Lake_SOC SMBus Host I/O Base = 0x%4X\n",m_SMBusMapIoAddr );
 
 	return true;
 }

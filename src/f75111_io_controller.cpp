@@ -20,7 +20,6 @@ F75111IOController::F75111IOController()
   m_F75111.bAddress = F75111_INTERNAL_ADDR;
 
   if (!F75111_Init()) throw std::runtime_error("Failed to initialize I/O");
-  std::cout << "F7511_Init() succeeded!" << std::endl;
 }
 
 void F75111IOController::setByte(BYTE byte)
