@@ -24,6 +24,7 @@ DWORD PCI_Read(int size_t)
 void PCI_Write(DWORD dwDataVal,int size_t)
 {
 	//SetPortVal(PCI_CONFIG_ADDR, dwDataVal,size_t);
+	printf("outl %x %x\n", dwDataVal, PCI_CONFIG_ADDR);
 	outl(dwDataVal,PCI_CONFIG_ADDR);
 	usleep(10);
 }
@@ -665,6 +666,7 @@ void SMBusIoWrite(BYTE byteOffset,BYTE byteData)
 {
 	//SetPortVal(m_SMBusMapIoAddr + byteOffset, byteData,1);
 	//printf("byteData is %x\nAddress: %x\n", byteData, m_SMBusMapIoAddr + byteOffset);
+	printf("outb %x %x\n", byteData,m_SMBusMapIoAddr + byteOffset);
 	outb(byteData,m_SMBusMapIoAddr + byteOffset);
 	usleep(10);
 }
